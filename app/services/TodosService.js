@@ -6,7 +6,7 @@ class TodosService {
   async getTodos() {
     const res = await api.get('api/todos')
 
-    console.log('got todos?', res.data);
+    // console.log('got todos?', res.data);
 
     const builtTodos = res.data.map(todoPojo => new Todo(todoPojo))
 
@@ -32,7 +32,7 @@ class TodosService {
     const todoData = { completed: !foundTodo.completed }
 
     const res = await api.put(`api/todos/${todoId}`, todoData)
-    console.log('I completed my task!', res.data);
+    // console.log('I completed my task!', res.data);
 
     const completedTodo = new Todo(res.data)
 
@@ -41,11 +41,12 @@ class TodosService {
     AppState.emit('todos')
 
   }
+
   async deleteTodo(todoId) {
     // console.log('todoId', todoId);
     const res = await api.delete(`api/todos/${todoId}`)
 
-    console.log(res.data, '<--this is the todo that was deleted');
+    // console.log(res.data, '<--this is the todo that was deleted');
 
     const todoIndex = AppState.todos.findIndex(todo => todo.id == todoId)
 

@@ -2,7 +2,7 @@ import { AppState } from "../AppState.js";
 import { todosService } from "../services/TodosService.js";
 import { getFormData } from "../utils/FormHandler.js";
 import { Pop } from "../utils/Pop.js";
-import { setHTML } from "../utils/Writer.js";
+import { setHTML, setText } from "../utils/Writer.js";
 
 function _drawTodos() {
   let todos = AppState.todos
@@ -11,12 +11,20 @@ function _drawTodos() {
   let template = ''
 
   todos.forEach(todo => template += todo.TodoTemplate)
+
+  const incompleteTodos = AppState.todos.filter(todo => !todo.completed)
+
   setHTML('todosList', template)
+  setText('todo-count', incompleteTodos.length)
+
 }
+
+
 export class TodosController {
 
   constructor() {
-    console.log('hello from todos controller!');
+    // console.log('hello from todos controller!');
+
     AppState.on('account', this.getTodos)
     AppState.on('todos', _drawTodos)
 
@@ -34,10 +42,10 @@ export class TodosController {
   async createTodo(event) {
     try {
       event.preventDefault()
-      console.log('you pushed the button!');
+      // console.log('you pushed the button!');
       const form = event.target
       const todoData = getFormData(form)
-      console.log('todo Data', todoData);
+      // console.log('todo Data', todoData);
       form.reset()
       await todosService.createTodo(todoData)
     } catch (error) {

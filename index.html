@@ -17,26 +17,8 @@
 
 <body>
   <!-- SECTION -->
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
-      <a class="navbar-brand" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ml-2">inspire</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <!-- NAVLINKS -->
-          <a href="#/about" class="nav-link">About</a>
-        </div>
-      </div>
-      <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
-    </nav>
-  </header>
+
+
 
   <!-- SECTION -->
   <main>
@@ -56,7 +38,7 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
               aria-labelledby="offcanvasRightLabel">
               <div class="offcanvas-header">
-                <h5 id="offcanvasRightLabel"><span>#count</span> Todos remaining</h5>
+                <h5 id="offcanvasRightLabel"><span id="todo-count"></span> Todos remaining</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                   aria-label="Close"></button>
               </div>
@@ -90,10 +72,24 @@
   </main>
 
   <!-- SECTION -->
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
-    </div>
+  <footer class="bg-dark text-light container-fluid">
+    <nav class="row">
+      <div id="weatherDisplay" class="col-6 p-3 justify-content-between d-flex">
+        <!-- <p class="fs-3">77 deg fahrenheit ☀️</p>
+           <span class="fs-3">${this.date.toLocaleTimeString} /span>-->
+      </div>
+      <div class="col-6">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
+        <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
+      </div>
+
+      <!-- </div> -->
+
+    </nav>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

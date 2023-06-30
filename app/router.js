@@ -2,6 +2,7 @@ import { AboutController } from "./controllers/AboutController.js";
 import { HomeController } from "./controllers/HomeController.js";
 import { TodosController } from "./controllers/TodosController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
+import { WeatherController } from "./controllers/WeatherController.js";
 import { AboutView } from "./views/AboutView.js";
 
 /**
@@ -11,7 +12,7 @@ import { AboutView } from "./views/AboutView.js";
 export const router = [
   {
     path: '',
-    controller: TodosController,
+    controller: [TodosController, WeatherController],
     view: ''
   },
   {
