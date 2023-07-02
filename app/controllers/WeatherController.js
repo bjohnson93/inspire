@@ -15,7 +15,7 @@ function _drawWeather() {
 export class WeatherController {
 
   constructor() {
-    console.log('the weather controller is in action!');
+    // console.log('the weather controller is in action!');
 
 
 
@@ -35,11 +35,11 @@ export class WeatherController {
 
 
   seeCelsius() {
-
+    const weather = AppState.weather
     setHTML('weatherDisplay', weather.CelsiusWeatherTemplate)
   }
   seeFahrenheit() {
-
+    const weather = AppState.weather
     setHTML('weatherDisplay', weather.WeatherTemplate)
   }
 }

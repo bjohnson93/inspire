@@ -29,7 +29,7 @@
       <!-- primary viewport -->
 
       <div class="container-fluid">
-        <section class="row">
+        <section class="row d-flex justify-content-end">
           <div class="col-4 p-3" id="todoForm">
 
             <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
@@ -74,14 +74,17 @@
   <!-- SECTION -->
   <footer class="bg-dark text-light container-fluid">
     <nav class="row">
-      <div id="weatherDisplay" class="col-6 p-3 justify-content-between d-flex">
+      <div id="weatherDisplay" class="col-4 p-3 justify-content-start align-items-center d-flex">
         <!-- <p class="fs-3">77 deg fahrenheit ☀️</p>
            <span class="fs-3">${this.date.toLocaleTimeString} /span>-->
       </div>
-      <div class="col-6">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      <div id="timeDisplay" class="col-4 text-center p-3">
+        <p class="fs-2">11:37 AM</p>
+      </div>
+      <div class="col-4 p-3 ">
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon "></span>
         </button>
         <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
         <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>

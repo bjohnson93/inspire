@@ -5,11 +5,11 @@ import { api } from "./AxiosService.js"
 class WeatherService {
   async getWeather() {
     const res = await api.get('api/weather')
-    console.log('what is the weather like?', res.data);
+    // console.log('what is the weather like?', res.data);
 
     AppState.weather = new Weather(res.data)
     // AppState.weather = res.data
-    console.log('ap weather', AppState.weather);
+    // console.log('ap weather', AppState.weather);
     AppState.emit('weather')
   }
 

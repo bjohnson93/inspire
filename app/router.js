@@ -1,4 +1,5 @@
 import { AboutController } from "./controllers/AboutController.js";
+import { TimeController } from "./controllers/TimeController.js";
 import { HomeController } from "./controllers/HomeController.js";
 import { TodosController } from "./controllers/TodosController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
@@ -12,7 +13,7 @@ import { AboutView } from "./views/AboutView.js";
 export const router = [
   {
     path: '',
-    controller: [TodosController, WeatherController],
+    controller: [TodosController, WeatherController, TimeController],
     view: ''
   },
   {
