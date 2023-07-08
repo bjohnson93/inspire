@@ -6,7 +6,7 @@ function _drawTime() {
   const newTime = currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
   // console.log(newTime);
   setHTML('timeDisplay', `
-  <p class="fs-2">${newTime}</p>
+  <p class="timeStyling">${newTime}</p>
   `)
 }
 

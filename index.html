@@ -15,7 +15,7 @@
   <title>inspire</title>
 </head>
 
-<body>
+<body id="backgroundImage">
   <!-- SECTION -->
 
 
@@ -29,13 +29,13 @@
       <!-- primary viewport -->
 
       <div class="container-fluid">
-        <section class="row d-flex justify-content-end">
+        <section class="row d-flex justify-content-end text-end">
           <div class="col-4 p-3" id="todoForm">
 
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-              aria-controls="offcanvasRight">Toggle right offcanvas</button>
+            <button class="btn dark-box text-light" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Open Todo List</button>
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+            <div class="offcanvas offcanvas-end light-box" tabindex="-1" id="offcanvasRight"
               aria-labelledby="offcanvasRightLabel">
               <div class="offcanvas-header">
                 <h5 id="offcanvasRightLabel"><span id="todo-count"></span> Todos remaining</h5>
@@ -72,16 +72,21 @@
   </main>
 
   <!-- SECTION -->
-  <footer class="bg-dark text-light container-fluid">
-    <nav class="row">
-      <div id="weatherDisplay" class="col-4 p-3 justify-content-start align-items-center d-flex">
+  <footer class="text-light container mb-3">
+    <section class="row justify-content-between">
+      <div id="quoteDisplay" class="col-12 text-center mb-3">
+        <!-- <p class="fs-2">An awe inspiring quote goes here</p> -->
+      </div>
+    </section>
+    <nav class="dark-box row d-flex justify-content-between align-items-center">
+      <div id="weatherDisplay" class="col-4 p-3">
         <!-- <p class="fs-3">77 deg fahrenheit ☀️</p>
            <span class="fs-3">${this.date.toLocaleTimeString} /span>-->
       </div>
       <div id="timeDisplay" class="col-4 text-center p-3">
-        <p class="fs-2">11:37 AM</p>
+        <p class="">11:37 AM</p>
       </div>
-      <div class="col-4 p-3 ">
+      <div class="col-4 p-3 mb-4">
         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon "></span>

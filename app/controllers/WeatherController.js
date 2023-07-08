@@ -27,8 +27,8 @@ export class WeatherController {
     try {
       await weatherService.getWeather()
     } catch (error) {
-      console.error(error)
       Pop.error(error.message)
+      console.error(error)
     }
   }
 

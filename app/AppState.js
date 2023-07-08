@@ -20,6 +20,11 @@ class ObservableAppState extends EventEmitter {
   /** @type {import('./models/Weather.js').Weather | null} */
   weather = null
 
+  /** @type {import('./models/Image.js').Image | null} */
+  image = null
+
+  /** @type {import('./models/Quote.js').Quote | null} */
+  quote = null
   // Used to load initial data
   init() {
 

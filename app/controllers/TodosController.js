@@ -35,8 +35,8 @@ export class TodosController {
     try {
       await todosService.getTodos()
     } catch (error) {
-      console.error(error)
       Pop.error(error.message)
+      console.error(error)
     }
   }
   async createTodo(event) {
@@ -49,8 +49,8 @@ export class TodosController {
       form.reset()
       await todosService.createTodo(todoData)
     } catch (error) {
-      console.error(error)
       Pop.error(error.message)
+      console.error(error)
     }
   }
 

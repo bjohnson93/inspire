@@ -1,4 +1,46 @@
 /* BASIC STYLES HERE */
+body {
+  background-size: cover;
+  background-position: center;
+}
+
+#quoteDisplay {
+  text-shadow: 3px 2px 2px rgb(56, 52, 52);
+}
+
 .custom-form {
+  display: block;
+}
+
+.dark-box {
+  /* From https://css.glass */
+  background: rgba(70, 67, 67, 0.79);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(70, 67, 67, 0.23);
+}
+
+.light-box {
+  /* From https://css.glass */
+  background: rgba(228, 216, 216, 0.79);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(228, 216, 216, 0.23);
+}
+
+.timeStyling {
+  font-size: 4em;
+}
+
+.hidden {
+  display: none;
+}
+
+#quoteDisplay:hover .hidden {
+  transition: all .9s ease-in-out;
   display: block;
 }

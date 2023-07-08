@@ -9,7 +9,7 @@ export class Todo {
   get TodoTemplate() {
     return `
     <div class="mb-2 fs-4">
-      <input ${this.completed ? 'checked' : ''} onchange="app.TodosController.toggleCompletedTodo('${this.id}')" type="checkbox" class="form-check-input fs-4" id="todoComplete"> ${this.description} <span class="selectable"><i  onclick="app.TodosController.deleteTodo('${this.id}')" class="mdi mdi-delete-circle"></i></span>
+      <input ${this.completed ? 'checked' : ''} onchange="app.TodosController.toggleCompletedTodo('${this.id}')" type="checkbox" class="form-check-input fs-4 " id="todoComplete"> ${this.description} <span class="selectable"><i  onclick="app.TodosController.deleteTodo('${this.id}')" class="mdi mdi-delete-circle"></i></span>
     </div>
     
     `
