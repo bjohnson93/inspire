@@ -11,7 +11,7 @@ export class Weather {
   get WeatherTemplate() {
     return `
      <div class="selectable toggle " id="tempToggle" onclick="app.WeatherController.seeCelsius()">
-    <p class="fs-3 mb-0">${this.FahrenheitTemp}° <img src="https://openweathermap.org/img/wn/${this.icon}.png" alt=""></p>
+    <p class="fs-3 mb-0">${this.FahrenheitTemp}° F <img src="https://openweathermap.org/img/wn/${this.icon}.png" alt=""></p>
     </div>
     
     `
@@ -20,7 +20,7 @@ export class Weather {
   get CelsiusWeatherTemplate() {
     return `
     <div class="selectable toggle " id="tempToggle" onclick="app.WeatherController.seeFahrenheit()">
-    <p class="fs-3 mb-0">${this.CelsiusTemp}° <img src="https://openweathermap.org/img/wn/${this.icon}.png" alt=""></p>
+    <p class="fs-3 mb-0">${this.CelsiusTemp}° C <img src="https://openweathermap.org/img/wn/${this.icon}.png" alt=""></p>
     </div>
     
     `
