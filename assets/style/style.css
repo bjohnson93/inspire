@@ -37,10 +37,13 @@ body {
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
+  transition: 1s ease-in-out;
+  opacity: 0;
 }
 
 #quoteDisplay:hover .hidden {
-  transition: all .9s ease-in-out;
-  display: block;
+  transition: 1s ease-in-out;
+  /* display: block; */
+  opacity: 100;
 }
