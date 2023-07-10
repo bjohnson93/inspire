@@ -32,7 +32,7 @@ class TodosService {
     const todoData = { completed: !foundTodo.completed }
 
     const res = await api.put(`api/todos/${todoId}`, todoData)
-    // console.log('I completed my task!', res.data);
+    console.log('I completed my task!', res.data);
 
     const completedTodo = new Todo(res.data)
 

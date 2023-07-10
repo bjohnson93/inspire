@@ -2,10 +2,17 @@
 body {
   background-size: cover;
   background-position: center;
+  font-family: 'Libre Baskerville', serif;
 }
+
 
 #quoteDisplay {
   text-shadow: 3px 2px 2px rgb(56, 52, 52);
+  font-family: 'Paprika', cursive;
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .custom-form {

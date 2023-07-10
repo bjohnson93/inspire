@@ -17,6 +17,7 @@ export class QuotesController {
     AppState.on('quote', _drawQuote)
   }
 
+
   async getQuote() {
     try {
       await quotesService.getQuote()
